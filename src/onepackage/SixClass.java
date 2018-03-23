@@ -1,8 +1,13 @@
 package onepackage;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.Stack;
 import java.util.Vector;
 
@@ -36,7 +41,7 @@ public class SixClass {
 		System.out.println("----------------------------------");
 		
 		LinkedList<String> ldl = new LinkedList<String>();
-		String[] str = {"a","bb","cc","ddd","eeee","fffff","g","hhhhh","ii","jjjj","kkkkkkk"};
+		String[] str = {"a","bb","cc","ddd","eeee","fffff","g","hhhhh","ii","ii","ii"};
 		for(int i=0; i<str.length; i++) {
 			ldl.add(i,str[i]);
 		}
@@ -89,6 +94,41 @@ public class SixClass {
 		st.pop();
 		System.out.println(st.peek());
 		System.out.println(st.search("ii"));
+		System.out.println("*****************************************");
+		
+		Set<String> hashset = new HashSet<String>();
+		for(int i=0; i<str.length; i++) {
+			hashset.add(str[i]);
+		}
+		System.out.println(hashset.size());
+		System.out.println(hashset.contains("bb"));
+		
+		Iterator<String> itrt = hashset.iterator();
+		while(itrt.hasNext()) {
+			String itrt_str = itrt.next();
+			System.out.print(itrt_str+"  ");
+		}
+		System.out.println();
+		System.out.println("*****************************************");
+		
+		Map<String, String> hashtable = new Hashtable<String,String>();
+		String[] hashstr = {"1","2","3","4","5","6","7","8","9","10","11"};
+		for(int i=0; i<str.length; i++) {
+			hashtable.put(hashstr[i], str[i]);
+		}
+		System.out.println(hashtable.size());
+		
+		for(int j=0; j<hashtable.size(); j++) {
+			System.out.print(hashtable.get(hashstr[j])+"  ");
+		}
+		System.out.println();
+		System.out.println("###############################################");
+		hashset = hashtable.keySet();
+		Iterator<String> itrt1 = hashset.iterator();
+		while(itrt1.hasNext()) {
+			String itrt_str = itrt1.next();
+			System.out.println(itrt_str);
+		}
 		
 	}
 }

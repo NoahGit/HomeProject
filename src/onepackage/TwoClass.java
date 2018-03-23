@@ -26,7 +26,7 @@ public class TwoClass {
 		String str3 = "02";
 		int inter = Integer.valueOf(str3);
 		System.out.println(inter);
-		
+		System.out.println("adsfasdfasdfadsfasdfasdfadsfadsfasdfasdf");
 		long l=8888888888L;
 		float f=10.56F;
 		System.out.println(l+"\t"+f);
